@@ -10,7 +10,6 @@ body {
 }
 
 .container {
-    width: 1200px;
     display: grid;
     grid-template-areas: 'navbar navbar navbar' 'row row row' 'footer footer footer';
     border: 2px solid black;
