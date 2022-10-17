@@ -1,17 +1,18 @@
 .sidebar {
     float: left;
-    height: 110px;
+    height: 150px;
+    
 }
 
 .inner-container2 {
     float: left;
     height: 110px;
     margin-left: 12px;
-    width: 91.5%;
+    width: 90%;
 }
 
 .inner-container {
-    margin: 12px 0 12px 0;
+    margin: 12px 0 0 0;
 }
 
 .main {
@@ -24,8 +25,9 @@
 .container {
     background-color: rgb(255, 77, 77);
     padding: 12px;
-    height: 220px;
+    height: 250px;
     overflow:visible;
+    margin:auto;
 }
 
 .child {
@@ -34,4 +36,10 @@
     font-size: 24px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: rgb(255, 138, 138);
+}
+* {
+    box-sizing: border-box;
+  }
+body {
+    padding: 10px;
 }
