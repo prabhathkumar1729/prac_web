@@ -15,16 +15,19 @@ body {
     border: 5px;
     padding: 5px;
     background-color: brown;
-    float: left;
 }
 
 .cell {
     float: left;
     width: calc(100%/var(--no-col));
-    columns: 1;
-    height: auto;
     border: 2px solid black;
     padding: 10px;
     background-color: aqua;
+    
+}
+.container:after {
+    content: "";
+    clear: both;
+    display: table;
     
 }
