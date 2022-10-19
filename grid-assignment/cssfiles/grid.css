@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 5px;
+    padding: 5px;
+    --no-col: 3;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(var(--no-col), auto);
+    width: 100%;
+    height: 100%;
+    border: 5px;
+    padding: 5px;
+    background-color: brown;
+}
+
+.cell {
+    width: 100%;
+    height: auto;
+    border: 2px solid black;
+    padding: 10px;
+    background-color: aqua;
+}
