@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tooltip Assignment</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+      }
+
+      [tooltip] {
+        position: relative;
+        color: blue;
+        text-align: center;
+        border-bottom: 2px dotted black;
+        margin: 0 auto;
+        min-width: 30px;
+        max-width: 200px;
+      }
+
+      [tooltip]::before {
+        position: absolute;
+        z-index: 2;
+        display: none;
+        width: 200px;
+        padding: 5px;
+        border-radius: 5px;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        content: attr(tooltip);
+      }
+
+      [tooltip]::after {
+        position: absolute;
+        z-index: 1;
+        display: none;
+        border: 5px solid transparent;
+        content: "";
+      }
+
+      :not([tooltip-position])::before {
+        position: absolute;
+        z-index: 2;
+        display: none;
+        width: 200px;
+        padding: 5px;
+        border-radius: 5px;
+        background-color: rgb(0, 0, 0);
+        color: white;
+        content: attr(tooltip);
+        bottom: calc(100% + 5px);
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      :not([tooltip-position])::after {
+        position: absolute;
+        z-index: 1;
+        display: none;
+        border: 5px solid transparent;
+        content: "";
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-bottom-width: 0;
+        border-top-color: rgb(0, 0, 0);
+      }
+
+      [tooltip]:hover::before,
+      [tooltip]:hover::after {
+        display: inline-block;
+      }
+
+      [tooltip][tooltip-position="top"]::before {
+        bottom: calc(100% + 5px);
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      [tooltip][tooltip-position="top"]::after {
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-bottom-width: 0;
+        border-top-color: rgb(0, 0, 0);
+      }
+
+      [tooltip][tooltip-position="bottom"]::before {
+        top: calc(100% + 15px);
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      [tooltip][tooltip-position="bottom"]::after {
+        top: calc(100% + 10px);
+        left: 50%;
+        transform: translateX(-50%);
+        border-top-width: 0;
+        border-bottom-color: rgb(0, 0, 0);
+      }
+
+      [tooltip][tooltip-position="left"]::before {
+        top: 50%;
+        right: calc(100% + 5px);
+        transform: translateY(-50%);
+      }
+
+      [tooltip][tooltip-position="left"]::after {
+        top: 50%;
+        right: 100%;
+        transform: translateY(-50%);
+        border-right-width: 0;
+        border-left-color: rgb(0, 0, 0);
+      }
+
+      [tooltip][tooltip-position="right"]::before {
+        top: 50%;
+        left: calc(100% + 5px);
+        transform: translateY(-50%);
+      }
+
+      [tooltip][tooltip-position="right"]::after {
+        top: 50%;
+        left: 100%;
+        transform: translateY(-50%);
+        border-left-width: 0;
+        border-right-color: rgb(0, 0, 0);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div tooltip="Tooltip text" tooltip-position="top">TOP</div>
+    <div tooltip="Tooltip text" tooltip-position="right">RIGHT</div>
+    <div tooltip="Tooltip text" tooltip-position="bottom">BOTTOM</div>
+    <div tooltip="Tooltip text" tooltip-position="left">LEFT</div>
+    <div tooltip="Tooltip text">NO ATTR</div>
+  </body>
+</html>
