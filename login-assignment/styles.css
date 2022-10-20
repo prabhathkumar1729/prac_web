@@ -1,0 +1,115 @@
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  .left {
+    left: 0;
+    background-color: #452b4e;
+  }
+  
+  .right {
+    right: 0;
+    background-color: #ffffff;
+  }
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+  }
+  
+  .centered img {
+    width: 150px;
+  }
+
+  .title {
+    color:#ffffff;
+    z-index: -1;
+  }
+
+  #images {
+    position: relative;
+  }
+
+  #img1 {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+
+.login{
+    color: #313131;
+}
+
+.app-icons {
+    display: flex;
+    align-items: center;
+    margin-top: 200px;
+  }
+  
+  .vertical {
+    width: 300px;
+    flex-direction: column;
+  }
+  
+  .android {
+    width: 150px;
+    height: 70px;
+
+  }
+
+  .apple {
+    width: 164px;
+    height: 70px;
+  }
+
+
+.login-options{
+    text-align: center;
+}
+
+.btn-light{
+    text-align: center;
+    padding: 10px 10px 20px 20px !important ;
+    margin-bottom: 20px;
+    width:400px;
+    background-color: white !important;
+    box-shadow: 1px 1px 1px 1px grey !important;
+}
+
+
+.or {
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid #818181; 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+ } 
+ 
+.or span { 
+    background: white;
+     color:#818181; 
+     padding:0 20px;
+     font-size:0.9rem;
+ }
+
+ .checkbox{
+    padding-top: 1rem;
+ }
+ 
+ .btn-primary{
+    background-color: #ff805d !important;
+ }
+
+ .register{
+    padding-top: 2rem;
+    text-align: center;
+ }
