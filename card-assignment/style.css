@@ -3,6 +3,7 @@
 * {
     margin: 0 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -11,11 +12,11 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    margin: 0 200px;
+    margin: 0 0;
 }
 
 .main {
-    height: 85vh;
+    height: 100vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
