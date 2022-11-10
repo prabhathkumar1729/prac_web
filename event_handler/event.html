@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <input type="button" id="button" onclick="sayThanks()"> -->
+    <button onclick="sayThanks()">Hiiiiiiii</button>
+    <button id="elem">Click me</button>
+
+<script>
+    function sayThanks() {
+  alert('Thanks!');
+}
+  class Menu {
+    handleEvent(event) {
+      switch(event.type) {
+        case 'mousedown':
+          elem.innerHTML = "Mouse button pressed";
+          break;
+        case 'mouseup':
+          elem.innerHTML = "...and released.";
+          break;
+      }
+    }
+  }
+
+  let menu = new Menu();
+
+  elem.addEventListener('mousedown', menu);
+  elem.addEventListener('mouseup', menu);
+</script>
+</body>
+</html>

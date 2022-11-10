@@ -1,193 +1,269 @@
-@import url('https://fonts.googleapis.com/css2?family=Playball&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Playball&display=swap");
 * {
-    margin: 0 0;
-    padding: 0;
+  margin: 0 0;
+  padding: 0;
 }
 
 body {
-    background-color: #f3f2f9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0 200px;
+  background-color: #f3f2f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  /* margin: 20px; */
 }
 
 .main {
-    height: 85vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* padding: 10px; */
 }
 
 .card {
-    height: 260px;
-    width: 195px;
-    margin: 24px;
-    border-radius: 4px;
-    position: relative;
-    /* transition: width 0.5s, height 0.5s; */
-    transition: transform .4s;
+  height: auto;
+  /* width: 195px; */
+  margin: 25px;
+  border-radius: 4px;
+  position: relative;
+  /* transition: width 0.5s, height 0.5s; */
+  transition: transform 0.4s;
+  width: calc(1 / 5 * 100% - (1 - 1 / 5) * 10px);
 }
 
 .card:hover {
-    /* height: 280px;
+  /* height: 280px;
     width: 215px; */
-
-    transform: scale(1.1); 
+  transform: scale(1.1);
 }
 
 .card-top {
-    padding: 6px 9px;
-    display: flex;
-    justify-content: space-between;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
-    height: 55px;
+  padding: 6px 9px;
+  display: flex;
+  justify-content: space-between;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  height: 55px;
 }
 
 .card img {
-    position: absolute;
-    top: 40px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    border: 3px solid white;
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 3px solid white;
 }
 
 .name {
-    margin-top:40px;
-    text-align: center;
-    font-family: 'Playball', cursive;
-    color:#707070;
+  margin-top: 40px;
+  text-align: center;
+  font-family: "Playball", cursive;
+  color: #707070;
 }
 
 .content {
-    font-size: 10px;
-    font-family:'Nunito Sans', sans-serif; 
-    color: #cbcbcb;
-    text-align: center;
-    padding:24px 22px 30px 22px;
-    line-height: 1.5;
+  font-size: 10px;
+  font-family: "Nunito Sans", sans-serif;
+  color: #cbcbcb;
+  text-align: center;
+  padding: 24px 22px 30px 22px;
+  line-height: 1.5;
 }
 
 .socials {
-    color: #b0b0b0;
-    text-align: center;
+  color: #b0b0b0;
+  text-align: center;
 }
 
-.socials>span {
-    margin:0 4px;
-    font-size: 10px;
+.socials > span {
+  margin: 0 4px;
+  font-size: 10px;
 }
 
 #pinterest img {
-    filter: drop-shadow(1px 1px 5px #ffcdd3);
+  filter: drop-shadow(1px 1px 5px #ffcdd3);
 }
 
 #pinterest .card-top {
-    background-color: #bd071e;
+  background-color: #bd071e;
 }
 
 #pinterest .card-top {
-    color: white;
+  color: white;
 }
 
 #pinterest .content {
-    color: #cbcbcb;
+  color: #cbcbcb;
 }
 
-#pinterest, #facebook, #behance, #linkedin, #dribbble, #blogger {
-    background-color: white;
+#pinterest,
+#facebook,
+#behance,
+#linkedin,
+#dribbble,
+#blogger {
+  background-color: white;
 }
 
 #facebook img {
-    filter: drop-shadow(1px 1px 5px #e0eaff);
+  filter: drop-shadow(1px 1px 5px #e0eaff);
 }
 
 #facebook .card-top {
-    background-color: #3b599a;
-    color: white;
+  background-color: #3b599a;
+  color: white;
 }
 
 #instagram img {
-    filter: drop-shadow(1px 1px 5px #ffb0dd);
+  filter: drop-shadow(1px 1px 5px #ffb0dd);
 }
 
 #instagram .card-top {
-    color: #c13584;
-    background-color: white;
+  color: #c13584;
+  background-color: white;
 }
 
 #instagram {
-    background-color: #c13584;
-    color:white;
+  background-color: #c13584;
+  color: white;
 }
 
-#instagram .socials, #instagram .name, #instagram .content
-{
-    color:white;
-}
-
-#behance .card-top {
-    background-color: #1869ff;
+#instagram .socials,
+#instagram .name,
+#instagram .content {
+  color: white;
 }
 
 #behance .card-top {
-    color: white;
+  background-color: #1869ff;
+}
+
+#behance .card-top {
+  color: white;
 }
 
 #dribbble .card-top {
-    background-color: #ea4c88;
-    color: white;
+  background-color: #ea4c88;
+  color: white;
 }
 
 #dribbble img {
-    filter: drop-shadow(1px 1px 5px #ffd4e5);
+  filter: drop-shadow(1px 1px 5px #ffd4e5);
 }
 
 #behance img {
-    filter: drop-shadow(1px 1px 5px #dae6ff);
+  filter: drop-shadow(1px 1px 5px #dae6ff);
 }
 
 #twitter {
-    background-color: #1ca1f1;
-    color: #1ca1f1;
+  background-color: #1ca1f1;
+  color: #1ca1f1;
 }
 
 #twitter .card-top {
-    background-color: white;
+  background-color: white;
 }
 
-#twitter .socials, #twitter .name, #twitter .content
-{
-    color:white;
+#twitter .socials,
+#twitter .name,
+#twitter .content {
+  color: white;
 }
 
 #twitter img {
-    filter: drop-shadow(1px 1px 5px #bfe6ff);
+  filter: drop-shadow(1px 1px 5px #bfe6ff);
 }
 
 #blogger .card-top {
-    background-color:#f57f01;
-    color: white;
+  background-color: #f57f01;
+  color: white;
 }
 
 #blogger img {
-    filter: drop-shadow(1px 1px 5px #fcead5);
+  filter: drop-shadow(1px 1px 5px #fcead5);
 }
 
 #linkedin .card-top {
-    background-color:#0177b6;
-    color: white;
+  background-color: #0177b6;
+  color: white;
 }
 
 #linkedin img {
-    filter: drop-shadow(1px 1px 5px #e0f4ff);
+  filter: drop-shadow(1px 1px 5px #e0f4ff);
 }
 
+/* *********************************************** */
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 0;
+  margin-bottom: 0;
+  cursor: pointer;
+  /* font-size: 150px; */
+}
+
+/* Hide the default checkbox */
+
+.container input {
+  visibility: hidden;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+
+.mark {
+  position: absolute;
+  top: 3px;
+  left: -6px;
+  height: 15px;
+  width: 15px;
+  background-color: inherit;
+  border: solid white;
+  border-radius: 2px;
+}
+
+.container:hover input ~ .mark {
+  background-color: inherit;
+}
+
+.container input:checked ~ .mark {
+  background-color: white;
+}
+
+/* Create the mark/indicator (hidden when not checked) */
+
+.mark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the mark when checked */
+
+.container input:checked ~ .mark:after {
+  display: block;
+}
+
+/* Style the mark/indicator */
+
+.container .mark:after {
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 5px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+#facebook-ip:checked ~ label {
+  background-color: red;
+  display: none;
+}
 

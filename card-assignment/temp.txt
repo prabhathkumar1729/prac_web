@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Question Form</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <!-- Fontawesome Sytle CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+  </head>
+  <body>
+    
+    <div class="allWrapper">
+        <header class="header" id="header">
+
+        </header><!-- end of header -->
+
+        <section class="quiz_section" id="quizeSection">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="quiz_area">
+                            <div class="quiz_backBtn_progressBar">
+                                <a href="#" class="quiz_backBtn"><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div><!-- end of quiz_backBtn_progressBar -->
+                        </div><!-- end of quiz_area -->
+
+                    </div><!-- end of col12 -->
+
+                    <div class="col-sm-12">
+                        <div class="quiz_content_area">
+                            <h1 class="quiz_title">Reason</h1>
+    
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <div class="quiz_card_area">
+                                        <input class="quiz_checkbox" type="checkbox" id="1" value="1" checked="checked" />
+                                        <div class="single_quiz_card">
+                                            <div class="quiz_card_content">
+                                                <div class="quiz_card_icon">
+                                                    <div class="quiz_icon quiz_icon1"></div>
+                                                </div><!-- end of quiz_card_media -->
+        
+                                                <div class="quiz_card_title">
+                                                        <h3><i class="fa fa-check" aria-hidden="true"></i> Title gose Here</h3>
+                                                </div><!-- end of quiz_card_title -->
+                                            </div><!-- end of quiz_card_content -->
+                                        </div><!-- end of single_quiz_card -->
+                                    </div><!-- end of quiz_card_area -->
+                                </div><!-- end of col3  -->
+
+                                <div class="col-sm-3">
+                                    <div class="quiz_card_area">
+                                        <input class="quiz_checkbox" type="checkbox" id="2" value="2" />
+                                        <div class="single_quiz_card">
+                                            <div class="quiz_card_content">
+                                                <div class="quiz_card_icon">
+                                                    <div class="quiz_icon quiz_icon2"></div>
+                                                </div><!-- end of quiz_card_media -->
+        
+                                                <div class="quiz_card_title">
+                                                        <h3><i class="fa fa-check" aria-hidden="true"></i> Title Gose Here</h3>
+                                                </div><!-- end of quiz_card_title -->
+                                            </div><!-- end of quiz_card_content -->
+                                        </div><!-- end of single_quiz_card -->
+                                    </div><!-- end of quiz_card_area -->
+                                </div><!-- end of col3  -->
+
+                                <div class="col-sm-3">
+                                    <div class="quiz_card_area">
+                                        <input class="quiz_checkbox" type="checkbox" id="2" value="2" />
+                                        <div class="single_quiz_card">
+                                            <div class="quiz_card_content">
+                                                <div class="quiz_card_icon">
+                                                    <div class="quiz_icon quiz_icon3"></div>
+                                                </div><!-- end of quiz_card_media -->
+        
+                                                <div class="quiz_card_title">
+                                                        <h3><i class="fa fa-check" aria-hidden="true"></i> Title Gose Here</h3>
+                                                </div><!-- end of quiz_card_title -->
+                                            </div><!-- end of quiz_card_content -->
+                                        </div><!-- end of single_quiz_card -->
+                                    </div><!-- end of quiz_card_area -->
+                                </div><!-- end of col3  -->
+
+                                <div class="col-sm-3">
+                                    <div class="quiz_card_area">
+                                        <input class="quiz_checkbox" type="checkbox" id="2" value="2" />
+                                        <div class="single_quiz_card">
+                                            <div class="quiz_card_content">
+                                                <div class="quiz_card_icon">
+                                                    <div class="quiz_icon quiz_icon4"></div>
+                                                </div><!-- end of quiz_card_media -->
+        
+                                                <div class="quiz_card_title">
+                                                        <h3><i class="fa fa-check" aria-hidden="true"></i> Title Goes Here</h3>
+                                                </div><!-- end of quiz_card_title -->
+                                            </div><!-- end of quiz_card_content -->
+                                        </div><!-- end of single_quiz_card -->
+                                    </div><!-- end of quiz_card_area -->
+                                </div><!-- end of col3  -->
+
+                                <div class="col-sm-3">
+                                    <div class="quiz_card_area">
+                                        <input class="quiz_checkbox" type="checkbox" id="2" value="2" />
+                                        <div class="single_quiz_card">
+                                            <div class="quiz_card_content">
+                                                <div class="quiz_card_icon">
+                                                    <i class="fa fa-home" aria-hidden="true"></i>
+                                                </div><!-- end of quiz_card_media -->
+        
+                                                <div class="quiz_card_title">
+                                                        <h3><i class="fa fa-check" aria-hidden="true"></i> Title Goes Here</h3>
+                                                </div><!-- end of quiz_card_title -->
+                                            </div><!-- end of quiz_card_content -->
+                                        </div><!-- end of single_quiz_card -->
+                                    </div><!-- end of quiz_card_area -->
+                                </div><!-- end of col3  -->
+
+                                <div class="col-sm-3">
+                                    <div class="quiz_card_area">
+                                        <input class="quiz_checkbox" type="checkbox" id="2" value="2" />
+                                        <div class="single_quiz_card">
+                                            <div class="quiz_card_content">
+                                                <div class="quiz_card_icon">
+                                                   <i class="fa fa-telegram" aria-hidden="true"></i>
+                                                </div><!-- end of quiz_card_media -->
+        
+                                                <div class="quiz_card_title">
+                                                        <h3><i class="fa fa-check" aria-hidden="true"></i> Title Goes Here</h3>
+                                                </div><!-- end of quiz_card_title -->
+                                            </div><!-- end of quiz_card_content -->
+                                        </div><!-- end of single_quiz_card -->
+                                    </div><!-- end of quiz_card_area -->
+                                </div><!-- end of col3  -->
+
+                                <div class="col-sm-3">
+                                    <div class="quiz_card_area">
+                                        <input class="quiz_checkbox" type="checkbox" id="2" value="2" />
+                                        <div class="single_quiz_card">
+                                            <div class="quiz_card_content">
+                                                <div class="quiz_card_icon">
+                                                    <i class="fa fa-coffee" aria-hidden="true"></i>
+                                                </div><!-- end of quiz_card_media -->
+        
+                                                <div class="quiz_card_title">
+                                                        <h3><i class="fa fa-check" aria-hidden="true"></i> Title Goes Here</h3>
+                                                </div><!-- end of quiz_card_title -->
+                                            </div><!-- end of quiz_card_content -->
+                                        </div><!-- end of single_quiz_card -->
+                                    </div><!-- end of quiz_card_area -->
+                                </div><!-- end of col3  -->
+
+                                <div class="col-sm-3">
+                                    <div class="quiz_card_area">
+                                        <input class="quiz_checkbox" type="checkbox" id="2" value="2" />
+                                        <div class="single_quiz_card">
+                                            <div class="quiz_card_content">
+                                                <div class="quiz_card_icon">
+                                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                                </div><!-- end of quiz_card_media -->
+        
+                                                <div class="quiz_card_title">
+                                                        <h3><i class="fa fa-check" aria-hidden="true"></i> Title Goes Here</h3>
+                                                </div><!-- end of quiz_card_title -->
+                                            </div><!-- end of quiz_card_content -->
+                                        </div><!-- end of single_quiz_card -->
+                                    </div><!-- end of quiz_card_area -->
+                                </div><!-- end of col3  -->
+
+                                <div class="col-sm-12">
+                                    <div class="quiz_next">
+                                        <button class="quiz_continueBtn">Continue</button>
+                                    </div><!-- end of quiz_next -->
+                                </div><!-- end of col12 -->
+
+                            </div><!-- end of quiz_card_area -->
+                        </div><!-- end of quiz_content_area -->
+
+                    </div><!-- end of col12 -->
+                </div><!-- end of row -->
+            </div><!-- end of container -->
+        </section><!-- end of quiz_section -->
+    </div><!-- end of allWrapper -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+      <div class="card" id="facebook">
+        <input type="checkbox" id="facebook-ip" />
+        <label class="container" for="facebook-ip">
+          <div class="card-top">
+            <span class="social-icon">
+              <i class="fa-brands fa-facebook-f"></i>
+            </span>
+
+            <span class="mark"></span>
+          </div>
+          <img src="images/img3.jpg " alt="image " />
+          <div class="card-bottom">
+            <div class="name">
+              <span>Prabhath</span>
+            </div>
+            <div class="content">
+              <span>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+                culpa perferendis assumenda nesciunt odio fugiat
+              </span>
+            </div>
+            <div class="socials">
+              <span><i class="fa-brands fa-twitter"></i></span>
+              <span><i class="fa-brands fa-linkedin-in"></i></span>
+              <span><i class="fa-brands fa-dribbble"></i></span>
+              <span><i class="fa-brands fa-instagram"></i></span>
+              <span><i class="fa-brands fa-behance"></i></span>
+            </div>
+          </div>
+        </label>
+      </div>

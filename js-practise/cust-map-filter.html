@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        arr=[11,12,13,14,15,16];
+        function cust_map(a,func)
+        {
+            let t=[];
+            for(let i of a){
+                t.push(func(i))
+            }
+            return t;
+        }
+        n_arr=cust_map(arr,(x)=>{return x*x;});
+        function cust_filter(a)
+        {
+            return a;
+        }
+        function iseven(a)
+        {
+            let t=[]
+            for(let i of a)
+            {
+                if(i%2==0)
+                t.push(i);
+            }
+            return t;
+        }
+        n_arr2=cust_filter(iseven(arr));
+        console.log(n_arr);
+    </script>
+</body>
+</html>

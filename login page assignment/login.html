@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BelajarYuk</title>
+    <link rel="stylesheet" href="sty.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="left">
+        <div class="l-header">
+          <h1>BelajarYuk.</h1>
+          <p>Let's Learning Something New Today</p>
+        </div>
+        <div class="l-imgcontainer">
+          <div class="circle">
+            <img class="image-cat" src="cat.png" alt="mobile pic" />
+            <img class="image-dog" src="dog.png" alt="mobile pic" />
+          </div>
+        </div>
+        <div class="l-footer">
+          <div>
+            <img
+              class="playstore"
+              alt="Google Play Store"
+              src="playstore.jpg"
+            />
+            <img class="appstore" alt="App Store" src="appstore.png" />
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="r-container">
+          <div class="r-header">
+            <h3>Login to BelajarYuk</h3>
+            <p>
+              Welcome back! login with your data that you entered during
+              registration
+            </p>
+          </div>
+
+          <div class="social-login-buttons">
+            <button type="button">
+              <i class="fa-brands fa-google"></i> Login with Google
+            </button>
+            <br />
+            <button type="button">
+              <i class="fa-brands fa-square-facebook"></i> Login with Facebook
+            </button>
+          </div>
+          <div class="or-line">
+            <hr class="l-line" />
+            or
+            <hr class="r-line" />
+          </div>
+          <form class="login-form">
+            <div class="credentials">
+              <div class="mail input-box">
+                <i class="fa-solid fa-envelope icon-left"></i>
+                <label for="mail">Email</label> <br />
+                <input
+                  type="email"
+                  id="mail"
+                  name="mail"
+                  placeholder="rifqinaufal@mail.com"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="password input-box">
+                <i class="fa-solid fa-lock icon-left"></i>
+                <label for="password">Password</label> <br />
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  placeholder="********"
+                  autocomplete="off"
+                />
+                <i class="fa-solid fa-eye icon-right"></i>
+              </div>
+            </div>
+            <div class="instr">
+              <input type="checkbox" id="remember" />
+              <span class="remember">Remember me</span>
+              <a class="forgot">forgot your password</a>
+            </div>
+            <div class="login"><button type="submit">LOGIN</button></div>
+          </form>
+          <div class="r-footer">
+            <p>Don't have an account?</p>
+            <a href="#">Register</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

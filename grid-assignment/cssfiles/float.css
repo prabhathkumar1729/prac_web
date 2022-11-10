@@ -1,33 +1,33 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 5px;
-    padding: 5px;
-    --no-col: 3;
+  margin: 5px;
+  padding: 5px;
+
+  /* Change the below value to set the number of columns you would like to see */
+  --no-col: 3;
 }
 
 .container {
-    overflow: auto;
-    width: 100%;
-    height: 100%;
-    border: 5px;
-    padding: 5px;
-    background-color: brown;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  border: 5px;
+  padding: 5px;
+  background-color: brown;
 }
 
 .cell {
-    float: left;
-    width: calc(100%/var(--no-col));
-    border: 2px solid black;
-    padding: 10px;
-    background-color: aqua;
-    
+  float: left;
+  width: calc(100% / var(--no-col));
+  border: 2px solid black;
+  padding: 10px;
+  background-color: aqua;
 }
 .container:after {
-    content: "";
-    clear: both;
-    display: table;
-    
+  content: "";
+  clear: both;
+  display: table;
 }

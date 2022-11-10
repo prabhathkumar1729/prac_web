@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg{background-color:antiquewhite;}
+        .c{color: brown !important;}
+    </style>
+
+</head>
+<body>
+    <div class="bg c">
+        hello
+    </div>
+    <script>
+        let prom = new Promise(function(resolve, reject){
+            let r = "prabhath";
+            resolve(2);
+            console.log("Im in 14");
+        });
+        prom.then(function(value){
+            console.log("Im in 17");
+            // console.log(value);
+            // return value;
+            // throw new Error("This is error in line 18");
+
+            // console.log("im in 19");
+            console.log(value*2);
+            return value*2;
+        })
+        .then(function(value){console.log("this is in line 21");return value*2;})
+        .then(function(value){console.log("Im in 25");console.log(value);return value*5;})
+        prom.then(function(value){console.log("error in 26th          "+value)})
+        .then(function(){console.log("Im in line 27")})
+        .then(function(){console.log("im in line 28")})
+        .catch(function(value){console.log(value+"hellllllllllllllllloooooooooooooooo")})
+        .then(function(){console.log("im in line 30")});
+
+    </script>
+</body>
+</html>

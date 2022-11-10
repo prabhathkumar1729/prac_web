@@ -1,0 +1,14 @@
+body{
+    /* background-color: darkorange; */
+}
+form{
+    width:500px;
+}
+input{
+    padding:10px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    width: 100%;
+    outline:none;
+box-shadow: none;
+}

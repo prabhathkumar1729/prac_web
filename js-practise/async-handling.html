@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+
+// async function thisThrows() {
+//     throw new Error("Thrown from thisThrows()");
+// }
+
+// try {
+//     thisThrows();
+// } catch (e) {
+//     console.error(e+"helllllllllllllllllllllllllllllllllllllllllllllllo");
+// } finally {
+//     console.log('We do cleanup here');
+// }
+
+// output:
+// We do cleanup here
+// UnhandledPromiseRejectionWarning: Error: Thrown from thisThrows()
+      
+async function thisThrows() {
+    throw new Error("Thrown from thisThrows()");
+}
+
+async function run() {
+    try {
+        await thisThrows();
+    } catch (e) {
+        console.error(e);
+    } finally {
+        console.log('We do cleanup here');
+    }
+}
+
+run();
+
+// Output:
+// Error: Thrown from thisThrows()
+//   ...stacktrace
+// We do cleanup here
+  </script>  
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1. Create a Promise to fetch the water
+let promise = new Promise(function(resolve, reject) {
+ // Pretend a delay of 2 sec to fetch it!
+  setTimeout(function() {
+      // Fetched the water. Let's resolve the promise
+      resolve('Hurray! Fetched the Water.');
+  }, 20000);
+  resolve("bugga");
+  console.log("im in line 18")
+//   reject(new Error('Hurraybugga.'));
+});
+
+// 2. Function to Set up the handler to handle a promise result.
+// It is to inform the grandparents when the result is available.
+const grandParentsCooking = () => {
+  // The handler function to handle the resolved promise
+  promise.then(function(result) {
+    // Fetched the water. Now grandparents can start the cooking
+    console.log(`cooking rice with the `+result);
+    console.log("im in 29")
+  });
+//   promise.catch(function(result){
+//     console.error(result);
+//   })
+}
+
+// 3. Calling the function to activate the set up.
+grandParentsCooking();
+
+    </script>
+</body>
+</html>
