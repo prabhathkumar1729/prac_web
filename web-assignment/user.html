@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>user</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+  />
     <script src="user.js"></script>
     <style>
       * {
@@ -39,43 +43,61 @@
         padding: 10px;
         margin: 10px;
       }
+      .comment1,
+      .comment2 {
+        border-bottom: 1px solid black;
+        padding: 5px;
+      }
+      .comment3 {
+        padding: 5px;
+      }
+      i{
+        margin: 2px;
+        cursor: pointer;
+      }
+
+
+      .buttons{
+        /* width: 10%; */
+        /* position: relative;
+        right: 0; */
+        text-align: right;
+      }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="card" data-postid="1">
-        <div class="title">Title</div>
-        <div class="body">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia culpa
-          perferendis assumenda nesciunt odio fugiat quaerat necessitatibus
-          laboriosam error corrupti aperiam mollitia vero ex, magni ullam!
-          Blanditiis assumenda asperiores sit.
-        </div>
-        <div class="comments">
-          <div
-            class="comment1"
-            style="border-bottom: 1px solid black; padding: 5px"
-          >
-            <div class="commenter">Commenter</div>
-            <div class="comment">Comment</div>
-            <div class="commenteremail">Commenteremail</div>
-          </div>
-          <div
-            class="comment2"
-            style="border-bottom: 1px solid black; padding: 5px"
-          >
-            <div class="commenter">Commenter</div>
-            <div class="comment">Comment</div>
-            <div class="commenteremail">Commenteremail</div>
-          </div>
-          <div class="comment3" style="padding: 5px">
-            <div class="commenter">Commenter</div>
-            <div class="comment">Comment</div>
-            <div class="commenteremail">Commenteremail</div>
-          </div>
-        </div>
-      </div>
+    <div id="container">
       <div class="card" data-postid="2">
+        <div class="buttons"><input type="checkbox"><i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash-can"></i></div>
+        <!-- <div class="cardtop"> -->
+          <span class="title"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum blanditiis, dignissimos quod velit accusantium animi sint voluptatibus repellendus facilis quia. Eaque dolorem odit obcaecati animi quia molestias adipisci nulla tempore! </span>
+          <!-- <span class="buttons"><input type="checkbox"><i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash-can"></i></span> -->
+        <!-- </div> -->
+        <div class="body">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia culpa
+          perferendis assumenda nesciunt odio fugiat quaerat necessitatibus
+          laboriosam error corrupti aperiam mollitia vero ex, magni ullam!
+          Blanditiis assumenda asperiores sit.
+        </div>
+        <div class="comments">
+          <div class="comment1">
+            <div class="commenter">Commenter</div>
+            <div class="comment">Comment</div>
+            <div class="commenteremail">Commenteremail</div>
+          </div>
+          <div class="comment2">
+            <div class="commenter">Commenter</div>
+            <div class="comment">Comment</div>
+            <div class="commenteremail">Commenteremail</div>
+          </div>
+          <div class="comment3">
+            <div class="commenter">Commenter</div>
+            <div class="comment">Comment</div>
+            <div class="commenteremail">Commenteremail</div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="card" data-postid="1">
         <div class="title">Title</div>
         <div class="body">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia culpa
@@ -84,29 +106,23 @@
           Blanditiis assumenda asperiores sit.
         </div>
         <div class="comments">
-          <div
-            class="comment1"
-            style="border-bottom: 1px solid black; padding: 5px"
-          >
+          <div class="comment1">
             <div class="commenter">Commenter</div>
             <div class="comment">Comment</div>
             <div class="commenteremail">Commenteremail</div>
           </div>
-          <div
-            class="comment2"
-            style="border-bottom: 1px solid black; padding: 5px"
-          >
+          <div class="comment2">
             <div class="commenter">Commenter</div>
             <div class="comment">Comment</div>
             <div class="commenteremail">Commenteremail</div>
           </div>
-          <div class="comment3" style="padding: 5px">
+          <div class="comment3">
             <div class="commenter">Commenter</div>
             <div class="comment">Comment</div>
             <div class="commenteremail">Commenteremail</div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </body>
 </html>
