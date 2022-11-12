@@ -4,12 +4,21 @@ function delpost(postid) {
     method: "DELETE",
   })
     .then((res) => res.status)
-    .then((result) => console.log(result));
+    .then((result) =>{
+      if (result == 200) {
+        let elem = document.getElementById(postid);
+        elem.parentNode.removeChild(elem);
+        alert("Post deleted successfully");
+        // location.reload();
+      } else {
+        alert("Error deleting post");
+      }
+    });
 }
 fetch("https://jsonplaceholder.typicode.com/users/" + userid + "/posts")
   .then((res) => res.json())
   .then((data) => {
-    var temp = "";
+    let temp = "";
     data.forEach(async (itemData) => {
       let cmntres = await fetch(
         "https://jsonplaceholder.typicode.com/posts/" +
@@ -17,7 +26,7 @@ fetch("https://jsonplaceholder.typicode.com/users/" + userid + "/posts")
           "/comments"
       );
       let cmntdata = await cmntres.json();
-      temp += "<div class='card' data-postid=" + itemData.id + ">";
+      temp += "<div class='card' id=" + itemData.id + ">";
       temp +=
         "<div class='buttons'><input type='checkbox'><i class='fa-solid fa-pen-to-square'></i><i class='fa-solid fa-trash-can' onclick='delpost(" +
         itemData.id +
@@ -25,8 +34,8 @@ fetch("https://jsonplaceholder.typicode.com/users/" + userid + "/posts")
       temp += "<div class='title'>" + itemData.title + "</div>";
       temp += "<div class='body'>" + itemData.body + "</div>";
       temp += "<div class='comments'>";
-      var c_temp = "";
-      var f = 1;
+      let c_temp = "";
+      let f = 1;
       for (let itemCmnt of cmntdata) {
         c_temp += `<div class="comment${f}">`;
         c_temp += "<div class='commenter'>" + itemCmnt.name + "</div>";

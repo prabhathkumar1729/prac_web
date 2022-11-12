@@ -17,7 +17,6 @@
       body {
         margin: 5px;
         padding: 5px;
-        --no-col: 1;
       }
       .container {
         display: flex;
@@ -28,7 +27,7 @@
         padding: 5px;
       }
       .card {
-        width: calc(100% / var(--no-col));
+        width: 100%;
         height: auto;
         border: 2px solid black;
         border-radius: 5px;
@@ -69,10 +68,7 @@
     <div id="container">
       <div class="card" data-postid="2">
         <div class="buttons"><input type="checkbox"><i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash-can"></i></div>
-        <!-- <div class="cardtop"> -->
-          <span class="title"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum blanditiis, dignissimos quod velit accusantium animi sint voluptatibus repellendus facilis quia. Eaque dolorem odit obcaecati animi quia molestias adipisci nulla tempore! </span>
-          <!-- <span class="buttons"><input type="checkbox"><i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash-can"></i></span> -->
-        <!-- </div> -->
+          <div class="title"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum blanditiis, dignissimos quod velit accusantium animi sint voluptatibus repellendus facilis quia. Eaque dolorem odit obcaecati animi quia molestias adipisci nulla tempore! </div>
         <div class="body">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia culpa
           perferendis assumenda nesciunt odio fugiat quaerat necessitatibus
