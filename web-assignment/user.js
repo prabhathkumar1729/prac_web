@@ -1,4 +1,15 @@
 let userid = location.search.substring(1);
+let selectedboxes = [];
+function selectbox(postid) {
+    if (selectedboxes.includes(postid)) {
+        selectedboxes.splice(selectedboxes.indexOf(postid), 1);
+        alert("Post unselected");
+    } else {
+        selectedboxes.push(postid);
+        alert("Post selected");
+    }
+    console.log(selectedboxes);
+}
 function delpost(postid) {
   fetch("https://jsonplaceholder.typicode.com/posts/" + postid, {
     method: "DELETE",
@@ -18,7 +29,8 @@ function delpost(postid) {
 fetch("https://jsonplaceholder.typicode.com/users/" + userid + "/posts")
   .then((res) => res.json())
   .then((data) => {
-    let temp = "";
+    // var a="";
+    // var temp = "";
     data.forEach(async (itemData) => {
       let cmntres = await fetch(
         "https://jsonplaceholder.typicode.com/posts/" +
@@ -26,9 +38,10 @@ fetch("https://jsonplaceholder.typicode.com/users/" + userid + "/posts")
           "/comments"
       );
       let cmntdata = await cmntres.json();
+      let temp = "";
       temp += "<div class='card' id=" + itemData.id + ">";
       temp +=
-        "<div class='buttons'><input type='checkbox'><i class='fa-solid fa-pen-to-square'></i><i class='fa-solid fa-trash-can' onclick='delpost(" +
+        "<div class='buttons'><input type='checkbox' value='"+itemData.id+"' onclick='selectbox("+itemData.id+")'><i class='fa-solid fa-pen-to-square'></i><i class='fa-solid fa-trash-can' onclick='delpost(" +
         itemData.id +
         ")'></i></div>";
       temp += "<div class='title'>" + itemData.title + "</div>";
@@ -49,6 +62,11 @@ fetch("https://jsonplaceholder.typicode.com/users/" + userid + "/posts")
       }
       temp += c_temp;
       temp += "</div></div>";
-      document.getElementById("container").innerHTML = temp;
+
+      // console.log(temp+"temp");
+      a=temp;
+      // console.log(a+"a");
+      document.getElementById("container").innerHTML += temp;
     });
+    // console.log(a+"a");
   });
