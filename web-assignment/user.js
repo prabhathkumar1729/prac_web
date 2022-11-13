@@ -18,7 +18,6 @@ function delpost(postid) {
       if (result == 200) {
         let elem = document.getElementById(postid);
         elem.remove();
-        alert("Post deleted successfully");
         // location.reload();
       } else {
         alert("Error deleting post");
@@ -30,10 +29,12 @@ function multidel() {
   for (let postid of selectedboxes) {
     delpost(postid);
   }
+  alert("Post(s) deleted successfully");
 }
-function conf(postid){
+function conf(postid) {
   if (confirm("Are you sure you want to delete the post?")) {
     delpost(postid);
+    alert("Post deleted successfully");
   } else {
     alert("Deletion cancelled");
   }
