@@ -9,7 +9,7 @@ function selectbox(postid) {
   }
 }
 
-async function delpost(postid) {
+function delpost(postid) {
   fetch("https://jsonplaceholder.typicode.com/posts/" + postid, {
     method: "DELETE",
   })
@@ -31,8 +31,14 @@ function multidel() {
     delpost(postid);
   }
 }
-
-function conf() {
+function conf(postid){
+  if (confirm("Are you sure you want to delete the post?")) {
+    delpost(postid);
+  } else {
+    alert("Deletion cancelled");
+  }
+}
+function multi_conf() {
   if (confirm("Are you sure you want to delete the selected post(s)?")) {
     multidel();
   } else {
@@ -56,7 +62,7 @@ fetch("https://jsonplaceholder.typicode.com/users/" + userid + "/posts")
         itemData.id +
         "' onclick='selectbox(" +
         itemData.id +
-        ")'><i class='fa-solid fa-pen-to-square'></i><i class='fa-solid fa-trash-can' onclick='delpost(" +
+        ")'><i class='fa-solid fa-pen-to-square'></i><i class='fa-solid fa-trash-can' onclick='conf(" +
         itemData.id +
         ")'></i></div>";
       temp += "<div class='title'>" + itemData.title + "</div>";

@@ -4,7 +4,6 @@ function rowclick(id) {
 fetch("https://jsonplaceholder.typicode.com/users")
   .then((res) => res.json())
   .then((data) => {
-    // console.log(data.data);
     if (data.length > 0) {
       var temp = "";
       data.forEach((itemData) => {
@@ -14,10 +13,7 @@ fetch("https://jsonplaceholder.typicode.com/users")
         temp += "<td>" + itemData.phone + "</td>";
         temp += "<td>" + itemData.website + "</td>";
         temp += "<td>" + itemData.company.name + "</td></tr>";
-        //     temp += "<td>" + itemData.employee_salary + "</td></tr>";
-        console.log(temp);
       });
       document.getElementById("data").innerHTML = temp;
     }
-    console.log(data);
   });
