@@ -6,28 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>user</title>
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-  />
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
     <script src="user.js"></script>
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
       * {
         box-sizing: border-box;
       }
       body {
-        margin: 5px;
-        padding: 5px;
+        padding: 10px;
+      }
+      .title, .commenter{
+        font-weight: bold;
+        font-family: 'Ubuntu', sans-serif;
+      }
+      .body, .comment{
+        font-style: italic;
       }
       .container {
         display: flex;
-        flex-wrap: wrap;
         width: 100%;
         height: 100%;
         border: 5px;
         padding: 5px;
+        text-align: right;
       }
       .card {
-        width: 100%;
         height: auto;
         border: 2px solid black;
         border-radius: 5px;
@@ -50,49 +56,33 @@
       .comment3 {
         padding: 5px;
       }
-      i{
+      i {
         margin: 2px;
         cursor: pointer;
       }
 
-
-      .buttons{
-        /* width: 10%; */
-        /* position: relative;
-        right: 0; */
+      .buttons {
         text-align: right;
+      }
+      .multi_div {
+        text-align: right;
+        padding-right: 20px;
+      }
+      #multidel_btn {
+        margin: 2px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 5px solid black;
+        cursor: pointer;
+        background-color: rgb(217, 110, 110);
+        font-weight: bold;
       }
     </style>
   </head>
   <body>
     <div id="container">
-      
-      <div class="card" data-postid="2">
-        <div class="buttons"><input type="checkbox"><i class="fa-solid fa-pen-to-square"></i><i class="fa-solid fa-trash-can"></i></div>
-          <div class="title"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum blanditiis, dignissimos quod velit accusantium animi sint voluptatibus repellendus facilis quia. Eaque dolorem odit obcaecati animi quia molestias adipisci nulla tempore! </div>
-        <div class="body">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia culpa
-          perferendis assumenda nesciunt odio fugiat quaerat necessitatibus
-          laboriosam error corrupti aperiam mollitia vero ex, magni ullam!
-          Blanditiis assumenda asperiores sit.
-        </div>
-        <div class="comments">
-          <div class="comment1">
-            <div class="commenter">Commenter</div>
-            <div class="comment">Comment</div>
-            <div class="commenteremail">Commenteremail</div>
-          </div>
-          <div class="comment2">
-            <div class="commenter">Commenter</div>
-            <div class="comment">Comment</div>
-            <div class="commenteremail">Commenteremail</div>
-          </div>
-          <div class="comment3">
-            <div class="commenter">Commenter</div>
-            <div class="comment">Comment</div>
-            <div class="commenteremail">Commenteremail</div>
-          </div>
-        </div>
+      <div class="multi_div">
+        <button id="multidel_btn" onclick="conf()">Delete selected</button>
       </div>
       <!-- <div class="card" data-postid="1">
         <div class="title">Title</div>

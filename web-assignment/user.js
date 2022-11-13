@@ -1,24 +1,23 @@
 let userid = location.search.substring(1);
 let selectedboxes = [];
+
 function selectbox(postid) {
-    if (selectedboxes.includes(postid)) {
-        selectedboxes.splice(selectedboxes.indexOf(postid), 1);
-        alert("Post unselected");
-    } else {
-        selectedboxes.push(postid);
-        alert("Post selected");
-    }
-    console.log(selectedboxes);
+  if (selectedboxes.includes(postid)) {
+    selectedboxes.splice(selectedboxes.indexOf(postid), 1);
+  } else {
+    selectedboxes.push(postid);
+  }
 }
-function delpost(postid) {
+
+async function delpost(postid) {
   fetch("https://jsonplaceholder.typicode.com/posts/" + postid, {
     method: "DELETE",
   })
     .then((res) => res.status)
-    .then((result) =>{
+    .then((result) => {
       if (result == 200) {
         let elem = document.getElementById(postid);
-        elem.parentNode.removeChild(elem);
+        elem.remove();
         alert("Post deleted successfully");
         // location.reload();
       } else {
@@ -26,11 +25,23 @@ function delpost(postid) {
       }
     });
 }
+
+function multidel() {
+  for (let postid of selectedboxes) {
+    delpost(postid);
+  }
+}
+
+function conf() {
+  if (confirm("Are you sure you want to delete the selected post(s)?")) {
+    multidel();
+  } else {
+    alert("Deletion cancelled");
+  }
+}
 fetch("https://jsonplaceholder.typicode.com/users/" + userid + "/posts")
   .then((res) => res.json())
   .then((data) => {
-    // var a="";
-    // var temp = "";
     data.forEach(async (itemData) => {
       let cmntres = await fetch(
         "https://jsonplaceholder.typicode.com/posts/" +
@@ -41,7 +52,11 @@ fetch("https://jsonplaceholder.typicode.com/users/" + userid + "/posts")
       let temp = "";
       temp += "<div class='card' id=" + itemData.id + ">";
       temp +=
-        "<div class='buttons'><input type='checkbox' value='"+itemData.id+"' onclick='selectbox("+itemData.id+")'><i class='fa-solid fa-pen-to-square'></i><i class='fa-solid fa-trash-can' onclick='delpost(" +
+        "<div class='buttons'><input type='checkbox' value='" +
+        itemData.id +
+        "' onclick='selectbox(" +
+        itemData.id +
+        ")'><i class='fa-solid fa-pen-to-square'></i><i class='fa-solid fa-trash-can' onclick='delpost(" +
         itemData.id +
         ")'></i></div>";
       temp += "<div class='title'>" + itemData.title + "</div>";
@@ -50,7 +65,7 @@ fetch("https://jsonplaceholder.typicode.com/users/" + userid + "/posts")
       let c_temp = "";
       let f = 1;
       for (let itemCmnt of cmntdata) {
-        c_temp += `<div class="comment${f}">`;
+        c_temp += "<div class='comment" + f + "'>";
         c_temp += "<div class='commenter'>" + itemCmnt.name + "</div>";
         c_temp += "<div class='comment'>" + itemCmnt.body + "</div>";
         c_temp += "<div class='commenteremail'>" + itemCmnt.email + "</div>";
@@ -62,11 +77,6 @@ fetch("https://jsonplaceholder.typicode.com/users/" + userid + "/posts")
       }
       temp += c_temp;
       temp += "</div></div>";
-
-      // console.log(temp+"temp");
-      a=temp;
-      // console.log(a+"a");
       document.getElementById("container").innerHTML += temp;
     });
-    // console.log(a+"a");
   });
